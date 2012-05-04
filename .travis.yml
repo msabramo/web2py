@@ -1,17 +1,19 @@
 language: python
 
 python:
+  - '2.5'
   - '2.6'
   - '2.7'
 
 before_script:
+  - pip install unittest2
+  - pip install pysqlite
   - mysql -e 'create database test_pymysql;'
   - mysql -e 'create database test_pymysql2;'
 
-script: python -m unittest discover
+script: PYTHONPATH=. unit2 -v gluon.tests
 
 notifications:
   irc:
     channels: "irc.freenode.org#web2py"
-    on_success: change
-    on_failure: change
+
