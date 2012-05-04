@@ -1,4 +1,4 @@
-import pymysql
+from gluon.contrib import pymysql
 import unittest
 
 class PyMySQLTestCase(unittest.TestCase):

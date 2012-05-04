@@ -1,5 +1,5 @@
 from gluon.contrib.pymysql.tests import base
-from pymysql import util
+from gluon.contrib.pymysql import util
 
 import time
 import datetime
